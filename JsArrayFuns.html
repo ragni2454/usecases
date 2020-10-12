@@ -1,0 +1,120 @@
+<!-- 
+foreach
+.map()
+find
+filter
+every
+some
+helper 
+ -->
+
+//map
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+
+		var fruits=[
+		{no:1,names:'apples',price:20},
+		{no:1,names:'kiwi',price:50},
+		{no:1,names:'pomo',price:100},
+		{no:1,names:'mango',price:120},      //map
+		{no:1,names:'bananas',price:70},
+		{no:1,names:'orange',price:10}
+
+       ]
+const splfruits=fruits.map(fruit => fruit.names);
+console.log(splfruits);
+		
+
+
+		var empls=[
+        {id:1,name:'ragni',years:22},
+        {id:2,name:'raj',years:32},               /////////reduce
+        {id:3,name:'kavya',years:56},
+        {id:4,name:'siva',years:45},
+        {id:5,name:'rani',years:23},
+        {id:5,name:'xyz',years:50},
+
+		]
+
+
+const employee=empls.reduce((tot,empl) =>empl.years+tot,0);
+console.log(employee);
+
+
+
+var empls=[
+        {id:1,name:'ragni',years:22},
+        {id:2,name:'raj',years:32},               /////////filter
+        {id:3,name:'kavya',years:56},
+        {id:4,name:'siva',years:45},
+        {id:5,name:'rani',years:23},
+        {id:5,name:'xyz',years:50},
+
+		]
+
+
+const filteremp=empls.filter(empl => empl.years===32);
+
+console.log(filteremp);
+
+
+var empls=[
+        {id:1,name:'ragni',years:22},
+        {id:2,name:'raj',years:32},               /////////find index
+        {id:3,name:'kavya',years:56},
+        {id:4,name:'siva',years:45},
+        {id:5,name:'rani',years:23},
+        {id:5,name:'xyz',years:50},
+
+		]
+
+
+var indexemp=empls.findIndex(empl => empl.name==='ragni');
+
+console.log(indexemp);
+
+
+
+var empls=[
+        {id:1,name:'ragni',years:22},
+        {id:2,name:'raj',years:32},               /////////every   ->if one condition is false then o/p will be false,it will 
+        {id:3,name:'kavya',years:56},               //it will check every item in the list and even one is false,o/p is false
+        {id:4,name:'siva',years:45},
+        {id:5,name:'rani',years:23},
+        {id:5,name:'xyz',years:50},
+
+		]
+
+
+var everyempl=empls.every(empl => empl.years >45);
+
+console.log(everyempl);
+
+
+
+
+var empls=[
+        {id:1,name:'ragni',years:22},
+        {id:2,name:'raj',years:32},               /////////some-> if even one condition is true then o/p will be true
+        {id:3,name:'kavya',years:56},
+        {id:4,name:'siva',years:45},
+        {id:5,name:'rani',years:23},
+        {id:5,name:'xyz',years:50},
+
+		]
+
+
+var someempl=empls.some(empl => empl.years > 45);
+
+console.log(someempl);
+
+	</script>
+</head>
+<body>
+
+
+</body>
+</html>
